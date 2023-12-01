@@ -1,0 +1,12 @@
+services:
+  nextapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    ports:
+      - "3300:3000"
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
